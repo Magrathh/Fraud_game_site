@@ -1,0 +1,83 @@
+/* src/assets/css/HomePage.css */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Запрещаем прокрутку */
+  font-family: 'Trebuchet MS', sans-serif; /* Напряженный шрифт */
+}
+
+.homepage-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: url('../images/bunker-bg1.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+/* Эффект размытого фона */
+.homepage-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(5px) brightness(0.7);
+  z-index: 1;
+}
+
+.homepage-content {
+  position: relative;
+  z-index: 2;
+}
+
+.main-title {
+  font-size: 7rem;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.door-buttons {
+  margin-top: 50px;
+  perspective: 1000px; /* Для 3D-эффекта при наведении */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.door-button {
+  padding: 40px 60px;
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  background-color: #333;
+  border: 5px solid #555;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.door-button.left-door:hover {
+  transform: rotateY(20deg);
+  background-color: #444;
+}
+
+.door-button.right-door:hover {
+  transform: rotateY(-20deg);
+  background-color: #444;
+}

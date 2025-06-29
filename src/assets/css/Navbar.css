@@ -1,0 +1,60 @@
+/* src/assets/css/Navbar.css */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  z-index: 1000;
+  color: #fff;
+  font-family: 'Roboto', sans-serif; /* Выбрать подходящий шрифт */
+}
+
+.navbar-logo span {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ff4d4d; /* Ярко-красный для акцента */
+}
+
+.navbar-auth .auth-button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-auth .auth-button.register {
+  background-color: #ff4d4d;
+  border-color: #ff4d4d;
+}
+
+.navbar-auth .auth-button:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+}

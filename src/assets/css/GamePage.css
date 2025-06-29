@@ -1,0 +1,60 @@
+/* src/assets/css/GamePage.css */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: 80px;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+.game-header {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff4d4d;
+}
+
+.game-grid {
+  display: grid;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Стили для разного количества игроков */
+.grid-16 { grid-template-columns: repeat(4, 1fr); }
+.grid-15 { grid-template-columns: repeat(5, 1fr); }
+.grid-14 { grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(2, 1fr); }
+/* ... и так далее, можно добавить больше вариантов или использовать JS для расчета */
+
+.game-player-card {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.player-video {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: #1a1a1a;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  /* Здесь будет отображаться видео с веб-камеры или аватар */
+}
+
+.player-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.player-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}

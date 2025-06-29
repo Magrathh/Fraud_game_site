@@ -1,0 +1,145 @@
+/* src/assets/css/Modal.css */
+
+/* --- ОСНОВНОЙ ЛЭЙАУТ МОДАЛЬНОГО ОКНА --- */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  border: 1px solid #444;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  color: #f0f0f0;
+  
+  /* Исправление, чтобы контент был поверх фона */
+  position: relative; 
+  z-index: 1;
+}
+
+/* --- СТРУКТУРА: HEADER, BODY, FOOTER --- */
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.modal-footer {
+  text-align: right;
+  margin-top: 30px;
+}
+
+
+/* --- ЭЛЕМЕНТЫ УПРАВЛЕНИЯ --- */
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.create-room-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.create-room-btn:hover {
+  background-color: #e60000;
+}
+
+
+/* --- СТИЛИ ДЛЯ ОКНА ВХОДА В КОМНАТУ (ВЫБОР) --- */
+
+.choice-view {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.choice-button {
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #555;
+  background-color: #333;
+  color: #f0f0f0;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.choice-button:hover {
+  background-color: #444;
+  border-color: #ff4d4d;
+}
